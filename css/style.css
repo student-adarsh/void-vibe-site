@@ -1,4 +1,3 @@
-/* Starry Background */
 body {
   margin: 0;
   overflow: hidden;
@@ -12,17 +11,20 @@ body {
   height: 100%;
   z-index: -1;
   display: block;
+  top: 0;
+  left: 0;
 }
 
 .stars {
-  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
+  background: url('https://i.imgur.com/7xMEjVR.png') repeat;
   animation: moveStars 100s linear infinite;
 }
 
 .twinkling {
-  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/twinkling.png') repeat;
+  background: url('https://i.imgur.com/KK0qEwz.png') repeat;
   animation: moveTwinkling 200s linear infinite;
 }
+
 
 @keyframes moveStars {
   from {background-position: 0 0;}
