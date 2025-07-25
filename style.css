@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  position: relative;
+}
+
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.stars {
+  background: url('https://i.imgur.com/7xMEjVR.png') repeat;
+  animation: moveStars 200s linear infinite;
+}
+
+.twinkling {
+  background: url('https://i.imgur.com/KK0qEwz.png') repeat;
+  animation: moveTwinkling 300s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+@keyframes moveTwinkling {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
