@@ -1,133 +1,72 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f0f0f;
-  color: #f0f0f0;
-  line-height: 1.6;
-  padding: 0 1rem;
-}
-
-header {
-  background: linear-gradient(90deg, #1e1e1e, #111);
-  padding: 1.5rem 0;
-  text-align: center;
-  border-bottom: 2px solid #444;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-shadow: 0 0 10px #00ffc3;
-}
-
-nav ul {
-  list-style: none;
+  background: #0d0d0d;
+  color: #e6e6e6;
+  font-family: 'Courier New', monospace;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 0;
-  margin-top: 1rem;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-nav ul li a,
-nav a {
-  color: #00ffc3;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav a:hover {
-  color: #ff00c8;
-}
-
-main {
-  max-width: 800px;
-  margin: 2rem auto;
+.container {
   text-align: center;
+  padding: 20px;
 }
 
-.intro h2 {
-  font-size: 2rem;
-  animation: typing 3s steps(25, end), blink-caret 0.75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #00ffc3;
-  width: 100%;
-  margin: auto;
+.main-title {
+  font-size: 2.8rem;
+  color: #00ffe7;
 }
 
-.intro p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #cccccc;
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #b3b3b3;
 }
 
-.poem {
-  margin: 2rem 0;
-  padding: 1rem;
-  background-color: #1e1e1e;
-  border-left: 5px solid #ff00c8;
-  box-shadow: 0 0 10px #ff00c8aa;
-  text-align: left;
+.nav-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  color: #00ffe7;
+  text-decoration: none;
+  border: 1px solid #00ffe7;
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
-.mood-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+.nav-button:hover {
+  background: #00ffe7;
+  color: #0d0d0d;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-input[type="text"],
-input[type="password"],
-textarea {
-  padding: 1rem;
-  background: #222;
-  color: #fff;
-  border: 1px solid #444;
+input[type="password"] {
+  padding: 10px;
+  border: none;
   border-radius: 5px;
+  outline: none;
 }
 
 button {
-  padding: 0.8rem 1.5rem;
-  background: #00ffc3;
+  padding: 10px 15px;
+  background-color: #00ffe7;
+  color: #0d0d0d;
   border: none;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-button:hover {
-  background: #ff00c8;
-  color: #fff;
+.footer-quote {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 1rem 0;
-  color: #777;
-  border-top: 1px solid #333;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #00ffc3; }
+.memory-quote {
+  font-style: italic;
+  margin-top: 30px;
+  color: #999;
 }
