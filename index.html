@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
   <div class="container">
-    <h1 class="main-title">Void Vibe Site</h1>
+    <h1 class="main-title typing-text" id="typed-title"></h1>
     <p class="tagline">Welcome to the space where feelings float without names.</p>
 
     <div class="link-zone">
@@ -16,7 +19,24 @@
       <a href="memories.html" class="nav-button">💭 Blurred Memories</a>
     </div>
 
-    <p class="footer-quote">“Some zones are not to be reached, only to be felt.”</p>
+    <p class="footer-quote fade-in">“Some zones are not to be reached, only to be felt.”</p>
   </div>
+
+  <script>
+    const text = "Void Vibe Site";
+    let i = 0;
+    const speed = 150;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typed-title").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>
+
