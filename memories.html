@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blurred Memories | Void Vibe</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      filter: blur(25px);
+      transition: filter 1s ease;
+      z-index: 0;
+    }
+
+    #text {
+      z-index: 2;
+      max-width: 80%;
+      text-align: center;
+      font-size: 22px;
+      line-height: 1.6;
+      animation: fadeIn 6s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #overlay {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    button {
+      position: absolute;
+      bottom: 30px;
+      z-index: 3;
+      background: none;
+      border: 1px solid #888;
+      color: #ccc;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      border-color: #00ffe7;
+      color: #00ffe7;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Monplaisir/Cinema_Palace/Monplaisir_-_03_-_Clouds_Through_Your_Fingers.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="bg"></div>
+  <div id="overlay"></div>
+
+  <div id="text">
+    “I don’t remember everything…<br>
+    but the feeling never left.”
+  </div>
+
+  <button onclick="reveal()">Reveal More</button>
+
+  <script>
+    let blur = 25;
+
+    function reveal() {
+      if (blur > 0) {
+        blur -= 5;
+        document.getElementById("bg").style.filter = `blur(${blur}px)`;
+        if (blur <= 0) {
+          document.getElementById("text").innerHTML = 
+            "“Now that I see it clearly…<br> I don't know if I was ready.”";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
